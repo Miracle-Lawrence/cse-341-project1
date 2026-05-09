@@ -1,11 +1,23 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const app = express();
+const express = require("express");
+const dotenv = require("dotenv");
+const { connectDB } = require("./config/db");
+
 dotenv.config();
 
-const PORT = process.env.PORT || 3000;
-app.use('/', require('./routes'));
+const app = express();
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+app.use(express.json());
+
+const PORT = process.env.PORT || 3000;
+
+app.use("/contacts", require("./routes/contacts"));
+
+async function startServer() {
+  await connectDB();
+
+  app.listen(PORT, () => {
+    console.log(`🚀 Server is running on port ${PORT}`);
+  });
+}
+
+startServer();
