@@ -4,3 +4,40 @@ GET https://cse-341-project1-wyys.onrender.com/contacts
 
 ### GET SINGLE CONTACT
 GET https://cse-341-project1-wyys.onrender.com/contacts/69ff544762b574f099a4aaf5
+
+
+### 3. CREATE NEW CONTACT
+
+POST https://cse-341-project1-wyys.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john@example.com",
+  "favoriteColor": "Blue",
+  "birthday": "2000-01-01"
+}
+
+### 4. UPDATE CONTACT
+
+PUT https://cse-341-project1-wyys.onrender.com/contacts/69ff544762b574f099a4aaf5
+Content-Type: application/json
+
+{
+  "firstName": "John Updated",
+  "lastName": "Doe Updated",
+  "email": "johnupdated@example.com",
+  "favoriteColor": "Red",
+  "birthday": "1999-05-10"
+}
+
+
+### 5. DELETE CONTACT
+
+DELETE https://cse-341-project1-wyys.onrender.com/contacts/69ff544762b574f099a4aaf5
+
+
+### 6. API Documentation
+
+GET https://cse-341-project1-wyys.onrender.com/api-docs
