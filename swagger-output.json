@@ -5,7 +5,7 @@
     "description": "Contacts API Documentation",
     "version": "1.0.0"
   },
-  "host": "cse-341-project1-wyys.onrender.com",
+  "host": "cse-341-project1-wyys.onrender.com/contacts",
   "basePath": "/",
   "schemes": [
     "https"

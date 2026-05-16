@@ -3,10 +3,12 @@ const dotenv = require("dotenv");
 const { connectDB } = require("./config/db");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger-output.json");
+const cors = require("cors");
 
 dotenv.config();
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 
